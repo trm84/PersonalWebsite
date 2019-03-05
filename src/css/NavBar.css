@@ -1,0 +1,187 @@
+* {box-sizing: border-box;}
+
+button {
+  all: unset;
+}
+
+/*General*/
+.navbar{
+  background-color: #36000A;
+  border-radius: 0px 0px 5px 5px; /*TL, TR, BL, BR*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  opacity: .9;
+}
+
+
+.text{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
+}
+
+#title{
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px; /*TL, TR, BL, BR*/
+}
+
+.selection:hover{
+  background-color: #7F2131;
+}
+.selection:active{
+  background-color: #C66C7C
+}
+
+/* Dropdown */
+.parent-menu{
+  text-align: center;
+}
+.sub-menu {
+  display: none;
+  text-align: center;
+  transform: translateX(0.5em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.parent-menu:hover + .sub-menu {
+  display: block; /* shows sub-menu */
+  z-index: 1;
+  transform: translateX(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.sub-menu:hover {
+  display: block;
+}
+
+/* MENU BUTTON*/
+.border-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.border-menu:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #FFF;
+  border-bottom: 0.125em solid #FFF;
+}
+
+/*Row setup*/
+.row::after {
+  content: "";
+  clear: both;
+  width: 100%;
+  display: flex;
+}
+
+/*Column Setups*/
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 5px 5px 5px 5px; /*TL, TR, BL, BR*/
+}
+.col-05{
+  width: 4.165%;
+  display: block;
+}
+.col-1 {
+  width: 8.33%;
+  display: block;
+}
+.col-1-5{
+  width: 12.495%;
+  display: block;
+}
+.col-2 {
+  width: 16.66%;
+  display: block;
+}
+.col-3 {
+  width: 25%;
+  display: block;
+}
+.col-4{
+  width: 33.33%;
+  display: block;
+}
+.col-5 {
+  width: 41.66%;
+  display: block;
+}
+.col-6 {
+  width: 50%;
+  display: block;
+}
+.col-7 {
+  width: 58.33%;
+  display: block;
+}
+.col-8 {
+  width: 66.66%;
+  display: block;
+}
+.col-9 {
+  width: 75%;
+  display: block;
+}
+.col-10 {
+  width: 83.33%;
+  display: block;
+}
+.col-11 {
+  width: 91.66%;
+  display: block;
+}
+.col-12 {
+  width: 100%;
+  display: block;
+}
+
+/*Mobile-size displays*/
+.mobile{
+  display: block;
+}
+.mid-size{
+  display: none;
+}
+.full-size{
+  display: none;
+}
+
+/*Mid-sized display*/
+@media only screen and (min-width: 825px) {
+  .mobile{
+    display: none;
+  }
+  .mid-size{
+    display: block;
+  }
+  .full-size{
+    display: none;
+  }
+  .col-4{
+    border-radius: 0px 0px 5px 5px; /*TL, TR, BL, BR*/
+  }
+}
+
+/*Desktop And Larger Displays*/
+@media only screen and (min-width: 1000px) {
+  .mobile{
+    display: none;
+  }
+  .full-size{
+    display: block;
+  }
+  .mid-size{
+    display: none;
+  }
+}

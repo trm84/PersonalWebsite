@@ -1,0 +1,135 @@
+.about{
+  background-color: #A7A7A7;
+  color: #793C46;
+}
+
+
+.aboutTitle{
+  font-family: 'PT Mono', monospace;
+  font-size: 25px;
+  border-bottom: 5px solid #793C46;
+}
+
+.row .aboutTitle{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.row .aboutBody{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.aboutBody{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+
+/*Row setup*/
+.row::after {
+  content: "";
+  clear: both;
+  width: 100%;
+  display: block;
+}
+
+/*Column Setups*/
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 5px 5px 5px 5px; /*TL, TR, BL, BR*/
+}
+.col-05{
+  width: 4.165%;
+  display: block;
+}
+.col-1 {
+  width: 8.33%;
+  display: block;
+}
+.col-1-5{
+  width: 12.495%;
+  display: block;
+}
+.col-2 {
+  width: 16.66%;
+  display: block;
+}
+.col-3 {
+  width: 25%;
+  display: block;
+}
+.col-4{
+  width: 33.33%;
+  display: block;
+}
+.col-5 {
+  width: 41.66%;
+  display: block;
+}
+.col-6 {
+  width: 50%;
+  display: block;
+}
+.col-7 {
+  width: 58.33%;
+  display: block;
+}
+.col-8 {
+  width: 66.66%;
+  display: block;
+}
+.col-9 {
+  width: 75%;
+  display: block;
+}
+.col-10 {
+  width: 83.33%;
+  display: block;
+}
+.col-11 {
+  width: 91.66%;
+  display: block;
+}
+.col-12 {
+  width: 100%;
+  display: block;
+}
+
+/*Mobile-size displays*/
+.mobile{
+  display: block;
+}
+.mid-size{
+  display: none;
+}
+.full-size{
+  display: none;
+}
+
+/*Mid-sized display*/
+@media only screen and (min-width: 825px) {
+  .mobile{
+    display: none;
+  }
+  .mid-size{
+    display: block;
+  }
+  .full-size{
+    display: none;
+  }
+}
+
+/*Desktop And Larger Displays*/
+@media only screen and (min-width: 1000px) {
+  .mobile{
+    display: none;
+  }
+  .full-size{
+    display: block;
+  }
+  .mid-size{
+    display: none;
+  }
+}
