@@ -1,5 +1,5 @@
 .about{
-  background-color: #A7A7A7;
+  background-color: #E5E5E5;
   color: #793C46;
 }
 
@@ -8,6 +8,7 @@
   font-family: 'PT Mono', monospace;
   font-size: 25px;
   border-bottom: 5px solid #793C46;
+  line-height: 5px;
 }
 
 .row .aboutTitle{
