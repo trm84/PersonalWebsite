@@ -14,7 +14,6 @@ class App extends Component {
       post: '',
       responseToPost: '',
       siteName: 'matthews-tyler.com',
-      titleLink: 'http://google.com',
       navBarHeight: 80
     };
   }
@@ -76,7 +75,7 @@ render() {
         <NavBar goAbout={this.goAbout} goHome={this.goHome} siteName={this.state.siteName} titleLink={this.state.titleLink} />
         <div ref="Home"><Home /></div>
         <div id="About" ref="About"><About /></div>
-
+        {/*
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -103,7 +102,7 @@ render() {
           />
           <button type="submit">Submit</button>
         </form>
-        <p>{this.state.responseToPost}</p>
+        <p>{this.state.responseToPost}</p>*/}
       </div>
     );
   }
