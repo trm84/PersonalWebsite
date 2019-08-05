@@ -56,38 +56,24 @@ class NavBar extends React.Component{
             <div className="col-3"> {/*Dead Space*/}</div>
             <div className="col-4 parent-menu">
               <p className='border-menu text'>Menu</p>
-            </div>
-            <div className="sub-menu">
-              <div className="row">
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <Link activeClass="active" to="about" offset={-80} spy={true} smooth={true} duration={500} >
-                  <div className="col-4 selection" >
-                    <p className="text">About</p>
-                  </div>
-                </Link>
-              </div>
-              <div className="row">
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4 selection">
-                  <p className="text">Links</p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4 selection">
+              <ul>
+                <li>
+                  <Link activeClass="active" to="about" offset={-80} spy={true} smooth={true} duration={500} >
+                    <div className="selection" >
+                      <p className="text">About</p>
+                    </div>
+                  </Link>
+                </li>
+                <li>
                   <p className="text">Projects</p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4"> {/*Dead Space*/}</div>
-                <div className="col-4 selection">
+                </li>
+                <li>
+                  <p className="text">Links</p>
+                </li>
+                <li>
                   <p className="text">Contact</p>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
           {/*MIDSISZED BELOW*/}

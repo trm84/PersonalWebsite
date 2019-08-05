@@ -41,6 +41,26 @@ button {
 .parent-menu{
   text-align: center;
 }
+
+.parent-menu > ul{
+  visibility: hidden;
+  list-style: none;
+  height: 0;
+  padding: 0 0 0 0;
+  margin:  0 0 0 0;
+}
+
+.parent-menu:hover ul{
+  visibility: visible;
+  height: auto;
+}
+
+.parent-menu:hover ul li{
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
 .sub-menu {
   display: none;
   text-align: center;
