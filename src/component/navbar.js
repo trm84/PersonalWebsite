@@ -1,5 +1,8 @@
 import React from "react"
-import NavBarCss from '../css/NavBar.css'
+import NavBarCss from '../assets/css/NavBar.css'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+
 class NavBar extends React.Component{
   constructor(props){
     super(props);
@@ -26,6 +29,14 @@ class NavBar extends React.Component{
     document.removeEventListener('click', this.closeDropdown);
   }
 
+  f1 = () => {
+    console.log("Entered");
+  }
+
+  f2 = () => {
+    console.log("Left");
+  }
+
 
   render(){
     return(
@@ -37,11 +48,11 @@ class NavBar extends React.Component{
 
           {/*MOBILE BELOW*/}
           <div className="mobile">
-            <a href={this.state.hrefLink}>
+            <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >
               <div className="col-5 selection">
                 <p id="title" className="text">{this.props.siteName}</p>
               </div>
-            </a>
+            </Link>
             <div className="col-3"> {/*Dead Space*/}</div>
             <div className="col-4 parent-menu">
               <p className='border-menu text'>Menu</p>
@@ -50,11 +61,11 @@ class NavBar extends React.Component{
               <div className="row">
                 <div className="col-4"> {/*Dead Space*/}</div>
                 <div className="col-4"> {/*Dead Space*/}</div>
-                <a onClick={this.props.goAbout}>
-                  <div className="col-4 selection">
+                <Link activeClass="active" to="about" offset={-80} spy={true} smooth={true} duration={500} >
+                  <div className="col-4 selection" >
                     <p className="text">About</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="row">
                 <div className="col-4"> {/*Dead Space*/}</div>
@@ -81,18 +92,18 @@ class NavBar extends React.Component{
           </div>
           {/*MIDSISZED BELOW*/}
           <div className="mid-size">
-            <a href={this.state.hrefLink}>
+            <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >
               <div className="col-3 selection">
                 <p id="title" className="text">{this.props.siteName}</p>
               </div>
-            </a>
+            </Link>
             <div className="col-3">{/*Dead Space*/}</div>
 
-            <a onClick={this.props.goAbout}>
+            <Link activeClass="active" to="about" offset={-80} spy={true} smooth={true} duration={500} >
               <div className="col-1-5 selection">
                 <p className="text">About</p>
               </div>
-            </a>
+            </Link>
 
             <div className="col-1-5 selection">
               <p className="text">Projects</p>
@@ -107,19 +118,19 @@ class NavBar extends React.Component{
           </div>
           {/*DESKTOP BELOW*/}
           <div className="full-size">
-            <a onClick={this.props.goHome}>
+            <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >
               <div className="col-2 selection">
                 <p id="title" className="text">{this.props.siteName}</p>
               </div>
-            </a>
+            </Link>
             <div className="col-5">{/*Dead Space*/}</div>
             <div className="col-1">{/*Dead Space*/}</div>
 
-            <a onClick={this.props.goAbout}>
-              <div className="col-1 selection">
-                <p className="text">About</p>
-              </div>
-            </a>
+            <Link activeClass="active" to="about" offset={-80} spy={true} smooth={true} duration={500} >
+                <div className="col-1 selection">
+                  <p className="text">About</p>
+                </div>
+            </Link>
 
             <div className="col-1 selection">
               <p className="text">Projects</p>

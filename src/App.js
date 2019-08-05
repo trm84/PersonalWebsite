@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import NavBar from './component/navbar.js'
 import Home from './component/home.js'
 import About from './component/about.js'
+
 
 class App extends Component {
   constructor(props){
@@ -43,38 +45,17 @@ class App extends Component {
     this.setState({ responseToPost: body });
   };
 
-  //Go to ref functions
-  goHome = () => {
-   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  }
-
-  goAbout = () => {
-   var el = document.getElementById("About");
-   window.scroll({top: el.offsetTop - this.state.navBarHeight, left: 0, behavior: 'smooth'});
-  }
-
-  goProjects = () => {
-    var el = document.getElementById("Projects");
-    window.scroll({top: el.offsetTop - this.state.navBarHeight, left: 0, behavior: 'smooth'});
-  }
-
-  goLinks = () => {
-    var el = document.getElementById("Links");
-    window.scroll({top: el.offsetTop - this.state.navBarHeight, left: 0, behavior: 'smooth'});
-  }
-
-  goContact = () => {
-    var el = document.getElementById("Contact");
-    window.scroll({top: el.offsetTop - this.state.navBarHeight, left: 0, behavior: 'smooth'});
-  }
-
 
 render() {
     return (
       <div className="App">
         <NavBar goAbout={this.goAbout} goHome={this.goHome} siteName={this.state.siteName} titleLink={this.state.titleLink} />
-        <div ref="Home"><Home /></div>
-        <div id="About" ref="About"><About /></div>
+
+        <Element name="home">
+          <Home />
+        </Element>
+        <Element name="about"></Element>
+          <About />
         {/*
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

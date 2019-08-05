@@ -1,6 +1,6 @@
 import React from "react"
 
-import AboutCss from '../css/About.css'
+import AboutCss from '../assets/css/About.css'
 import {text} from '../assets/json/aboutme.json'
 
 class About extends React.Component{
@@ -112,6 +112,11 @@ class About extends React.Component{
                   80kW electric vehicle to compete against other universities, and I was the lead for my senior design team
                   "Cycle-Assist".
                 </p>
+                <br/>
+                <br/>
+                <br/><br/>
+                <br/>
+                <br/>
               </div>
               <div className="col-4">
                 <p>
